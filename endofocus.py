@@ -1,7 +1,7 @@
+# Currently need to solve "[ WARN:1] terminating async callback" after FPS print
+
 from threading import Thread
 exec('from __future__ import print_function')
-
-
 #from __future__ import print_function
 from imutils.video import WebcamVideoStream
 from imutils.video import FPS
@@ -86,7 +86,7 @@ args = vars(ap.parse_args())
 
 # grab a pointer to the video stream and initialize the FPS counter
 print("[INFO] sampling frames from webcam...")
-stream = cv2.VideoCapture(0)
+stream = cv2.VideoCapture(1)
 fps = FPS().start()
 
 # loop over some frames
